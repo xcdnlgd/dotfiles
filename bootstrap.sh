@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 set -x
 
-ln -s $(pwd)/.tmux.conf $HOME
+ln -s $PWD/.tmux.conf $HOME
+ln -s $PWD/.config/starship.toml $HOME/.config
