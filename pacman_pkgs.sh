@@ -13,6 +13,7 @@ pacman -S --needed \
     inetutils \
     openssh \
     starship \
+    vivid \
     zoxide \
     zsh \
     zsh-completions \
