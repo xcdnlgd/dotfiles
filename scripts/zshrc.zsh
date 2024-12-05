@@ -7,6 +7,7 @@ alias ip="ip -color"
 alias feh="feh --force-aliasing"
 alias ls="lsd"
 alias ll="ls -l"
+export LS_COLORS="$(vivid generate one-dark)"
 
 unalias run-help
 autoload run-help
@@ -75,7 +76,6 @@ set_path(){
 set_path ~/.cargo/bin
 
 export RUSTC_WRAPPER=$(which sccache)
-export LS_COLORS="$(vivid generate one-dark)"
 
 # fzf
 export FZF_DEFAULT_OPTS='--info=inline --bind ctrl-j:down,ctrl-k:up'
