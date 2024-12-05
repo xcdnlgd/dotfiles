@@ -5,3 +5,8 @@ pacman -S --needed \
     bat \
     fzf \
     skim \
+    bacon \
+    ripgrep \
+    tree-sitter \
+    inetutils \
+    openssh \
