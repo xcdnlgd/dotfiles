@@ -4,6 +4,7 @@ alias mkcd='function __mkcd(){ if [ $# = 1 ]; then mkdir $1; if [ $? = 0 ]; then
 alias lgit='lazygit'
 alias ldocker='lazydocker'
 alias ip="ip -color"
+alias grep="grep --color"
 alias feh="feh --force-aliasing"
 alias ls="lsd"
 alias ll="ls -l"
