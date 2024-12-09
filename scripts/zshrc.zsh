@@ -41,9 +41,13 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey -v
 bindkey -v '^?' backward-delete-char '^[[3~' delete-char
-bindkey '^[[3;5~' kill-word
-bindkey '^H' backward-kill-word
-bindkey '^[[Z' reverse-menu-complete
+bindkey '^[[3;5~' kill-word # ctrl+delete
+bindkey '^H' backward-kill-word # ctrl+backspace
+bindkey '^[[Z' reverse-menu-complete # shift+tab, select prev
+bindkey "^[[H" beginning-of-line # HOME
+bindkey "^[[1~" beginning-of-line # HOME in tmux
+bindkey "^[[F" end-of-line # END
+bindkey "^[[4~" end-of-line # END in tmux
 zmodload zsh/complist
 bindkey -M menuselect '^[' undo
 KEYTIMEOUT=10 # fast undo
