@@ -46,8 +46,10 @@ bindkey '^H' backward-kill-word # ctrl+backspace
 bindkey '^[[Z' reverse-menu-complete # shift+tab, select prev
 bindkey "^[[H" beginning-of-line # HOME
 bindkey "^[[1~" beginning-of-line # HOME in tmux
+bindkey "^A" beginning-of-line # emacs
 bindkey "^[[F" end-of-line # END
 bindkey "^[[4~" end-of-line # END in tmux
+bindkey "^E" end-of-line # emacs
 zmodload zsh/complist
 bindkey -M menuselect '^[' undo
 KEYTIMEOUT=10 # fast undo
@@ -79,6 +81,7 @@ set_path(){
 }
 
 set_path ~/.cargo/bin
+set_path ~/.local/bin
 
 export RUSTC_WRAPPER=$(which sccache)
 
