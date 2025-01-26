@@ -83,6 +83,16 @@ set_path(){
 set_path ~/.cargo/bin
 set_path ~/.local/bin
 
+# use y instead of yazi to start, and press q to quit, you'll see the CWD changed. Sometimes, you don't want to change, press Q to quit
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 export RUSTC_WRAPPER=$(which sccache)
 
 # fzf
@@ -103,7 +113,8 @@ export FZF_CTRL_R_OPTS="
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-# zvm_after_init_commands+=('source /usr/share/fzf/key-bindings.zsh && source /usr/share/fzf/completion.zsh')
+
+export EDITOR=nvim
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
