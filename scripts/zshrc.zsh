@@ -3,6 +3,7 @@ alias open='xdg-open'
 alias mkcd='function __mkcd(){ if [ $# = 1 ]; then mkdir $1; if [ $? = 0 ]; then cd $1; fi; unset -f __mkcd; elif [ $# = 2 ]; then mkdir $1 $2; if [ $? = 0 ]; then if [ -d $1 ]; then cd $1; elif [ -d $2 ]; then cd $2; fi; fi; unset -f __mkcd; fi }; __mkcd'
 alias lgit='lazygit'
 alias ldocker='lazydocker'
+alias vim='nvim -u NONE'
 alias ip="ip -color"
 alias grep="grep --color"
 alias feh="feh --force-aliasing"
