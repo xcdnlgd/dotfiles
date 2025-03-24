@@ -2,18 +2,21 @@ pacman -S --needed \
     cmake \
     xdg-utils \
     dust \
+    diskus \
     bat \
     fzf \
+    lsd \
     lazygit \
+    fd \
     ripgrep \
     ripgrep-all \
     skim \
     bacon \
-    tree-sitter \
     inetutils \
     openssh \
     starship \
     vivid \
+    yazi \
     zoxide \
     zsh \
     zsh-completions \
