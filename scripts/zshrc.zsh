@@ -44,6 +44,8 @@ bindkey -v
 bindkey -v '^?' backward-delete-char '^[[3~' delete-char
 bindkey '^[[3;5~' kill-word # ctrl+delete
 bindkey '^H' backward-kill-word # ctrl+backspace
+bindkey '^[[1;5D' backward-word # ctrl+left
+bindkey '^[[1;5C' forward-word # ctrl+right
 bindkey '^[[Z' reverse-menu-complete # shift+tab, select prev
 bindkey "^[[H" beginning-of-line # HOME
 bindkey "^[[1~" beginning-of-line # HOME in tmux
