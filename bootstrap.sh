@@ -13,3 +13,6 @@ ln -s $PWD/scripts/zshrc.zsh $HOME/scripts
 
 mkdir -p $HOME/.config/yazi
 ln -s $PWD/.config/yazi/keymap.toml $HOME/.config/yazi
+
+mkdir -p $HOME/.config/wireplumber/wireplumber.conf.d
+ln -s $PWD/.config/wireplumber/wireplumber.conf.d/51-disable-suspension.conf $HOME/.config/wireplumber/wireplumber.conf.d
