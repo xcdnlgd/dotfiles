@@ -16,3 +16,6 @@ ln -s $PWD/.config/yazi/keymap.toml $HOME/.config/yazi
 
 mkdir -p $HOME/.config/wireplumber/wireplumber.conf.d
 ln -s $PWD/.config/wireplumber/wireplumber.conf.d/51-disable-suspension.conf $HOME/.config/wireplumber/wireplumber.conf.d
+
+mkdir -p $HOME/.config/fish
+ln -s $PWD/.config/fish/config.fish $HOME/.config/fish
