@@ -41,9 +41,21 @@ zstyle ':completion:*' group-name ''
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey -v
+function zle-line-init zle-keymap-select {
+    if [[ $KEYMAP == "vicmd" ]]; then
+        # 普通模式（Normal mode）：块状光标
+        echo -ne "\e[2 q"
+    else
+        # 插入模式（Insert mode）：竖线光标
+        echo -ne "\e[6 q"
+    fi
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+zle-line-init
 bindkey -v '^?' backward-delete-char '^[[3~' delete-char
 bindkey '^[[3;5~' kill-word # ctrl+delete
-bindkey '^H' backward-kill-word # ctrl+backspace
+bindkey '^H' vi-backward-kill-word # ctrl+backspace
 bindkey '^[[1;5D' backward-word # ctrl+left
 bindkey '^[[1;5C' forward-word # ctrl+right
 bindkey '^[[Z' reverse-menu-complete # shift+tab, select prev
