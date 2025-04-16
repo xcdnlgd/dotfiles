@@ -6,6 +6,7 @@ if status is-interactive
   bind -M insert ctrl-h backward-kill-word
   bind -M insert ctrl-delete kill-word
   set copy 'echo -n $fish_killring[1] | fish_clipboard_copy'
+  set -g fish_color_command green
 
   bind y,y kill-whole-line yank $copy
   bind Y kill-whole-line yank $copy
