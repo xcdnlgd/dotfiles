@@ -52,6 +52,7 @@ if status is-interactive
   alias feh="feh --force-aliasing"
   alias ls="lsd"
   alias ll="ls -l"
+  alias chafa="chafa --symbols vhalf"
   export LS_COLORS="$(vivid generate one-dark)"
 
   # TODO:
@@ -78,9 +79,10 @@ if status is-interactive
   # export FZF_COMPLETION_TRIGGER='\\'
   # export FZF_COMPLETION_OPTS='--preview "([[ $(file --mime {}) =~ directory ]] && tree -C {}) || ([[ $(file --mime {}) =~ binary ]] && echo {} is a binary file) || bat -n --color=always {} 2> /dev/null"'
   # export FZF_PREVIEW_COMMAND='([[ $(file --mime {}) =~ directory ]] && tree -C {}) || ([[ $(file --mime {}) =~ binary ]] && echo {} is a binary file) || bat -n --color=always {} 2> /dev/null'
-  export FZF_CTRL_T_OPTS="
-  --preview '(bat -n --color=always {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+  # export FZF_CTRL_T_OPTS="
+  # --preview '(bat -n --color=always {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null'
+  # --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+  # export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
   export FZF_CTRL_R_OPTS="
   --reverse
   --preview 'echo {}' --preview-window up:3:hidden:wrap
@@ -88,7 +90,6 @@ if status is-interactive
   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
   --color header:italic
   --header 'Press CTRL-Y to copy command into clipboard'"
-  export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
   fzf --fish | source
 
   export EDITOR=nvim
