@@ -5,6 +5,8 @@ if status is-interactive
   # Commands to run in interactive sessions can go here
   bind -M insert ctrl-h backward-kill-word
   bind -M insert ctrl-delete kill-word
+  bind -M insert ctrl-a beginning-of-line
+  bind -M insert ctrl-e end-of-line
   set copy 'echo -n $fish_killring[1] | fish_clipboard_copy'
   set -g fish_color_command green
 
