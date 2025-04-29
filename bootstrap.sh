@@ -24,3 +24,6 @@ mkdir -p $HOME/.local/share/fcitx5/rime
 ln -s $PWD/.local/share/fcitx5/rime/default.custom.yaml $HOME/.local/share/fcitx5/rime
 mkdir -p $HOME/.config/environment.d
 ln -s $PWD/.config/environment.d/im.conf $HOME/.config/environment.d
+
+mkdir -p $HOME/.config/fontconfig/conf.d/
+ln -s $PWD/.config/fontconfig/conf.d/64-language-selector-prefer.conf $HOME/.config/fontconfig/conf.d/
