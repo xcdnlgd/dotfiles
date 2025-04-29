@@ -19,3 +19,8 @@ ln -s $PWD/.config/wireplumber/wireplumber.conf.d/51-disable-suspension.conf $HO
 
 mkdir -p $HOME/.config/fish
 ln -s $PWD/.config/fish/config.fish $HOME/.config/fish
+
+mkdir -p $HOME/.local/share/fcitx5/rime
+ln -s $PWD/.local/share/fcitx5/rime/default.custom.yaml $HOME/.local/share/fcitx5/rime
+mkdir -p $HOME/.config/environment.d
+ln -s $PWD/.config/environment.d/im.conf $HOME/.config/environment.d

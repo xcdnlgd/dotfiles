@@ -5,6 +5,7 @@ pacman -S --needed \
     diskus \
     bat \
     fzf \
+    fcitx5-im fcitx5-rime rime-double-pinyin \
     lsd \
     lazygit \
     fd \
@@ -15,6 +16,7 @@ pacman -S --needed \
     inetutils \
     openssh \
     starship \
+    tealdeer \
     vivid \
     yazi \
     zoxide \
