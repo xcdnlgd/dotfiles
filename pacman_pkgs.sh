@@ -1,3 +1,4 @@
+#!/bin/bash
 pacman -S --needed \
     cmake \
     xdg-utils \
@@ -12,11 +13,14 @@ pacman -S --needed \
     ripgrep \
     ripgrep-all \
     skim \
+    sccache \
     bacon \
     inetutils \
     openssh \
     starship \
     tealdeer \
+    unzip \
+    unrar \
     vivid \
     yazi \
     zoxide \

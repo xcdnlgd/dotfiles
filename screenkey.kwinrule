@@ -1,0 +1,23 @@
+[Window settings for screenkey]
+Description=Window settings for screenkey
+above=true
+aboverule=3
+acceptfocusrule=2
+fpplevel=2
+fpplevelrule=2
+fsplevel=2
+fsplevelrule=2
+noborder=true
+noborderrule=3
+position=0,800
+positionrule=3
+skipswitcher=true
+skipswitcherrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+title=screenkey
+titlematch=1
+types=1
+wmclass=python3.13 screenkey
+wmclasscomplete=true
+wmclassmatch=1
