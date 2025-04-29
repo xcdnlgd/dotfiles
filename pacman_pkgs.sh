@@ -6,7 +6,6 @@ pacman -S --needed \
     diskus \
     bat \
     fzf \
-    fcitx5-im fcitx5-rime rime-double-pinyin \
     lsd \
     lazygit \
     fd \
