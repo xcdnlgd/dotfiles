@@ -27,3 +27,6 @@ ln -s $PWD/.config/environment.d/im.conf $HOME/.config/environment.d
 
 mkdir -p $HOME/.config/fontconfig/conf.d/
 ln -s $PWD/.config/fontconfig/conf.d/64-language-selector-prefer.conf $HOME/.config/fontconfig/conf.d/
+
+mkdir -p $HOME/.cargo
+ln -s $PWD/.cargo/config.toml $HOME/.cargo

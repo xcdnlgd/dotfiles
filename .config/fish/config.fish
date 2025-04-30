@@ -74,6 +74,7 @@ if status is-interactive
   end
 
   export RUSTC_WRAPPER=$(which sccache)
+  alias cargo='mold -run cargo'
 
   # fzf
   export FZF_DEFAULT_OPTS='--info=inline --bind ctrl-j:down,ctrl-k:up'
