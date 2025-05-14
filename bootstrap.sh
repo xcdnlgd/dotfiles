@@ -30,3 +30,6 @@ ln -s $PWD/.config/fontconfig/conf.d/64-language-selector-prefer.conf $HOME/.con
 
 mkdir -p $HOME/.cargo
 ln -s $PWD/.cargo/config.toml $HOME/.cargo
+
+mkdir -p $HOME/.config/mpv
+ln -s $PWD/.config/mpv/mpv.conf $HOME/.config/mpv
