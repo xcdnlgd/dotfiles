@@ -1,3 +1,13 @@
 patch:
   schema_list:
     - schema: double_pinyin
+
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Caps_Lock: noop
+      Control_L: noop
+      Control_R: noop
+      Eisu_toggle: noop
+      Shift_L: noop
+      Shift_R: noop
