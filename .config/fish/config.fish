@@ -56,6 +56,8 @@ if status is-interactive
   alias ll="ls -l"
   alias chafa="chafa --symbols vhalf"
   export LS_COLORS="$(vivid generate one-dark)"
+  # batman
+  export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 
   # TODO:
   # zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
