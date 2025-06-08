@@ -33,5 +33,7 @@ ln -s $PWD/.cargo/config.toml $HOME/.cargo
 
 mkdir -p $HOME/.config/mpv
 ln -s $PWD/.config/mpv/mpv.conf $HOME/.config/mpv
+mkdir -p $HOME/.config/mpv/scrips
+ln -s $PWD/.config/mpv/scripts/sub-fonts-dir-auto.lua $HOME/.config/mpv/scrips
 
 ln -s $PWD/.clang-format $HOME
