@@ -41,3 +41,6 @@ ln -s $PWD/scripts/zshrc.zsh $HOME/scripts
 mkdir -p $HOME/.cargo
 ln -s $PWD/.cargo/config.toml $HOME/.cargo
 
+pushd $HOME/.config/yazi
+ya pkg install
+popd

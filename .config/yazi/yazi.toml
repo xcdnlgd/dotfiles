@@ -1,0 +1,15 @@
+[plugin]
+prepend_preloaders = [
+# Replace magick, image, video with mediainfo
+{ mime = "{audio,video,image}/*", run = "mediainfo" },
+{ mime = "application/subrip", run = "mediainfo" },
+]
+prepend_previewers = [
+# Replace magick, image, video with mediainfo
+{ mime = "{audio,video,image}/*", run = "mediainfo"},
+{ mime = "application/subrip", run = "mediainfo" },
+{ name = "*.tar*", run = 'piper --format=url -- tar tf "$1"' },
+]
+# There are more extensions which are supported by mediainfo.
+# Just add file's MIME type to `previewers`, `preloaders` above.
+# https://mediaarea.net/en/MediaInfo/Support/Formats

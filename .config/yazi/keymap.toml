@@ -1,4 +1,5 @@
 [mgr]
 prepend_keymap = [
-    { on = "<Enter>", run = "enter", desc = "Enter the child directory" },
+{ on = "<Enter>", run = "enter", desc = "Enter the child directory" },
+{ on = "M", run = "plugin mount" }
 ]
