@@ -1,0 +1,29 @@
+let mapleader=" "
+
+nnoremap <leader>w :w<cr>
+nnoremap <leader>h :nohl<cr>
+nnoremap <leader>d :bd<cr>
+
+nnoremap y "+y
+vnoremap y "+y
+nnoremap p "+p
+nnoremap P "+P
+vnoremap p "+p
+vnoremap x "+x
+
+vnoremap < <gv
+vnoremap > >gv
+
+vnoremap y "+ygv<esc>
+
+nnoremap ]b :bnext<cr>
+nnoremap [b :bprev<cr>
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set backspace=indent,eol,start
