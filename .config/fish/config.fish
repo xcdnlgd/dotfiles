@@ -76,6 +76,14 @@ if status is-interactive
   end
 
   export RUSTC_WRAPPER=$(which sccache)
+    function mkfile
+        for filepath in $argv
+            set dir (dirname $filepath)
+            mkdir -p $dir
+            touch $filepath
+        end
+    end
+
   alias cargo='mold -run cargo'
 
   # fzf
