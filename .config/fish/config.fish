@@ -45,6 +45,11 @@ if status is-interactive
     bind -M visual -m default y kill-selection yank end-selection repaint-mode $copy
     bind -M visual -m default p kill-selection fish_clipboard_paste end-selection repaint-mode
 
+    # unbind alt-e
+    bind -M insert alt-e ''
+    bind -M visual alt-e ''
+    bind alt-e ''
+
     alias open='xdg-open'
     alias lgit='lazygit'
     alias ldocker='lazydocker'
