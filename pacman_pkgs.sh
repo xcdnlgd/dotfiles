@@ -11,7 +11,6 @@ pacman -S --needed \
     fd \
     ripgrep \
     ripgrep-all \
-    skim \
     sccache \
     bacon \
     inetutils \
