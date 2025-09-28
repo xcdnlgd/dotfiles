@@ -1,6 +1,7 @@
 nnoremap gd :tag<cr>
 nnoremap gg :0<cr>
 nnoremap <space>w :w<cr>
+nnoremap <c-o> :pop<cr>
 
 nnoremap <space>/ :comment<cr>
 vnoremap <space>/ :comment<cr>
@@ -11,3 +12,6 @@ nnoremap p "+p
 nnoremap P "+P
 vnoremap p "+p
 vnoremap x "+x
+
+vnoremap > >gv
+vnoremap < <gv
