@@ -56,7 +56,6 @@ if status is-interactive
     alias vim='nvim -u NONE'
     alias ip="ip -color"
     alias grep="grep --color"
-    alias feh="feh --force-aliasing"
     alias ls="lsd"
     alias ll="ls -l"
     alias chafa="chafa --symbols vhalf"
