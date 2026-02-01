@@ -5,3 +5,5 @@ ColumnLimit: 0
 AlignOperands: Align
 IndentCaseLabels: true
 AllowShortIfStatementsOnASingleLine: true
+Cpp11BracedListStyle: false
+AlignArrayOfStructures: Right
