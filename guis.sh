@@ -3,7 +3,7 @@ pacman -S --needed \
     elisa \
     feh \
     filelight \
-    fcitx5-im fcitx5-rime rime-double-pinyin \
+    fcitx5-im fcitx5-rime \
     screenkey \
     kompare \
     kclock \

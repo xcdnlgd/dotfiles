@@ -1,7 +1,8 @@
 patch:
-  schema_list:
-    - schema: double_pinyin
-    - schema: luna_pinyin
+  # schema_list:
+  #   - schema: double_pinyin
+  #   - schema: luna_pinyin
+  __include: rime_ice_suggestion:/
 
   ascii_composer:
     good_old_caps_lock: true
