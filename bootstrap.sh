@@ -6,7 +6,7 @@ create_symlink() {
     local dest="$2"
 
     mkdir -p "$(dirname "$dest")"
-    ln -s "$src" "$dest"
+    ln -sf "$src" "$dest"
 }
 
 scan_and_link() {
