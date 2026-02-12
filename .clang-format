@@ -7,3 +7,4 @@ IndentCaseLabels: true
 AllowShortIfStatementsOnASingleLine: true
 Cpp11BracedListStyle: false
 AlignArrayOfStructures: Right
+AllowShortCaseLabelsOnASingleLine: true
