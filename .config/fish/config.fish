@@ -108,7 +108,8 @@ if status is-interactive
     --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
     --color header:italic
     --header 'Press CTRL-Y to copy command into clipboard'"
-    fzf --fish | source
+    # fzf --fish | source
+    tv init fish | source
 
     export EDITOR=nvim
 
