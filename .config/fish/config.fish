@@ -115,6 +115,7 @@ if status is-interactive
 
     starship init fish | source
     zoxide init fish | source
-    direnv hook fish | source
+    # direnv hook fish | source
+    mise activate fish | source
 end
 
