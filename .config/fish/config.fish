@@ -4,7 +4,7 @@ if status is-interactive
     abbr -a !! --position anywhere --function last_history_item
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
-    bind -M insert ctrl-h backward-kill-word
+    bind -M insert ctrl-backspace backward-kill-word
     bind -M insert ctrl-delete kill-word
     bind -M insert ctrl-a beginning-of-line
     bind -M insert ctrl-e end-of-line
@@ -60,6 +60,7 @@ if status is-interactive
     alias ls="lsd"
     alias ll="ls -l"
     alias chafa="chafa --symbols vhalf"
+    alias hx="helix"
     export LS_COLORS="$(vivid generate one-dark)"
     # batman
     export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
