@@ -31,15 +31,15 @@ scan_and_link() {
 scan_and_link "$PWD/.config" "$HOME/.config"
 scan_and_link "$PWD/.local" "$HOME/.local"
 
-ln -s $PWD/.tmux.conf $HOME
-ln -s $PWD/.clang-format $HOME
+ln -sf $PWD/.tmux.conf $HOME
+ln -sf $PWD/.clang-format $HOME
 
 mkdir -p $HOME/scripts
 echo 'source ~/scripts/zshrc.zsh' > $HOME/.zshrc
-ln -s $PWD/scripts/zshrc.zsh $HOME/scripts
+ln -sf $PWD/scripts/zshrc.zsh $HOME/scripts
 
 mkdir -p $HOME/.cargo
-ln -s $PWD/.cargo/config.toml $HOME/.cargo
+ln -sf $PWD/.cargo/config.toml $HOME/.cargo
 
 pushd $HOME/.config/yazi
 ya pkg install
