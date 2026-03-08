@@ -49,7 +49,7 @@ local o = {
     additional_audio_exts = "",
     ignore_hidden = true,
     same_type = false,
-    directory_mode = "auto",
+    directory_mode = "ignore",
     ignore_patterns = ""
 }
 
