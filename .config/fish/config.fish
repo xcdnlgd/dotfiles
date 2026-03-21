@@ -118,5 +118,6 @@ if status is-interactive
     zoxide init fish | source
     # direnv hook fish | source
     mise activate fish | source
+    fnm env --use-on-cd --shell fish | source
 end
 
