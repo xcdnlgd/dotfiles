@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -ex
+
+echo "blacklist ntfs3" | sudo tee /etc/modprobe.d/disable-ntfs3.conf
