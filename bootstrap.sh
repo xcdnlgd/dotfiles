@@ -34,9 +34,9 @@ scan_and_link "$PWD/.local" "$HOME/.local"
 ln -sf $PWD/.tmux.conf $HOME
 ln -sf $PWD/.clang-format $HOME
 
-mkdir -p $HOME/scripts
-echo 'source ~/scripts/zshrc.zsh' > $HOME/.zshrc
-ln -sf $PWD/scripts/zshrc.zsh $HOME/scripts
+# mkdir -p $HOME/scripts
+# echo 'source ~/scripts/zshrc.zsh' > $HOME/.zshrc
+# ln -sf $PWD/scripts/zshrc.zsh $HOME/scripts
 
 mkdir -p $HOME/.cargo
 ln -sf $PWD/.cargo/config.toml $HOME/.cargo
