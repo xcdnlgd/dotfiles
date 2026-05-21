@@ -1,0 +1,13 @@
+swipe:
+  3:
+    up:
+      update:
+        command: "qdbus6 org.kde.kglobalaccel /component/kmix invokeShortcut increase_volume"
+        interval: 1.0 # You can change step change in KDE Settings > Audio > Configure audio controls
+    down:
+      update:
+        command: "qdbus6 org.kde.kglobalaccel /component/kmix invokeShortcut decrease_volume"
+        interval: 1.0
+# hold:
+#   3:
+#     command: "qdbus6 org.kde.kglobalaccel /component/mediacontrol invokeShortcut playpausemedia"
