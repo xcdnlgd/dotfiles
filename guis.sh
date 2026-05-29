@@ -1,10 +1,14 @@
 #!/bin/bash
+
+set -ex
+
 pacman -S --needed \
     elisa \
     feh \
+    mpv \
     filelight \
-    fcitx5-im fcitx5-rime \
-    screenkey \
+    fcitx5-rime \
+    konsole \
     kompare \
     kclock \
     krecorder \
@@ -12,3 +16,6 @@ pacman -S --needed \
     okular \
     gwenview \
     spectacle \
+    partitionmanager \
+    kdeconnect \
+    isoimagewriter \
