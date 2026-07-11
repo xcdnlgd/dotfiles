@@ -1,7 +1,7 @@
 if status is-interactive
     set fish_greeting
     function last_history_item; echo $history[1]; end
-    abbr -a !! --position anywhere --function last_history_item
+    # abbr -a !! --position anywhere --function last_history_item
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
     bind -M insert ctrl-backspace backward-kill-word
