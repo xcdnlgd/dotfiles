@@ -61,6 +61,7 @@ if status is-interactive
     alias ll="ls -l"
     alias chafa="chafa --symbols vhalf"
     alias hx="helix"
+    alias wine="LC_ALL=zh_CN.utf8 command wine"
     export LS_COLORS="$(vivid generate one-dark)"
     # batman
     export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
