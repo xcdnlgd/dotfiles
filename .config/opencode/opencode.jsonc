@@ -1,8 +1,119 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "permission": {
-    "edit": "ask",
-    "bash": "ask",
-    "external_directory": "ask",
-  }
+  "permissions": [
+    // Ask before anything that can change files or reach outside the project.
+    { "action": "edit", "resource": "*", "effect": "ask" },
+    { "action": "external_directory", "resource": "*", "effect": "ask" },
+    { "action": "shell", "resource": "*", "effect": "ask" },
+
+    // Scratch directory: read and write freely
+    { "action": "external_directory", "resource": "/tmp/opencode/*", "effect": "allow" },
+    { "action": "external_directory", "resource": "/tmp/opencode", "effect": "allow" },
+    { "action": "edit", "resource": "/tmp/opencode/*", "effect": "allow" },
+
+    // Navigation and directory listing
+    { "action": "shell", "resource": "cd *", "effect": "allow" },
+    { "action": "shell", "resource": "pwd *", "effect": "allow" },
+    { "action": "shell", "resource": "ls *", "effect": "allow" },
+    { "action": "shell", "resource": "tree *", "effect": "allow" },
+
+    // Reading files
+    { "action": "shell", "resource": "cat *", "effect": "allow" },
+    { "action": "shell", "resource": "head *", "effect": "allow" },
+    { "action": "shell", "resource": "tail *", "effect": "allow" },
+    { "action": "shell", "resource": "bat *", "effect": "allow" },
+    { "action": "shell", "resource": "wc *", "effect": "allow" },
+    { "action": "shell", "resource": "file *", "effect": "allow" },
+    { "action": "shell", "resource": "stat *", "effect": "allow" },
+
+    // Searching and text inspection
+    { "action": "shell", "resource": "grep *", "effect": "allow" },
+    { "action": "shell", "resource": "rg *", "effect": "allow" },
+    { "action": "shell", "resource": "find *", "effect": "allow" },
+    { "action": "shell", "resource": "diff *", "effect": "allow" },
+    { "action": "shell", "resource": "sort *", "effect": "allow" },
+    { "action": "shell", "resource": "uniq *", "effect": "allow" },
+    { "action": "shell", "resource": "cut *", "effect": "allow" },
+    { "action": "shell", "resource": "tr *", "effect": "allow" },
+    { "action": "shell", "resource": "sed *", "effect": "allow" },
+    { "action": "shell", "resource": "jq *", "effect": "allow" },
+    { "action": "shell", "resource": "echo *", "effect": "allow" },
+    { "action": "shell", "resource": "printf *", "effect": "allow" },
+
+    // System information
+    { "action": "shell", "resource": "uname *", "effect": "allow" },
+    { "action": "shell", "resource": "whoami", "effect": "allow" },
+    { "action": "shell", "resource": "id *", "effect": "allow" },
+    { "action": "shell", "resource": "groups *", "effect": "allow" },
+    { "action": "shell", "resource": "date *", "effect": "allow" },
+    { "action": "shell", "resource": "uptime", "effect": "allow" },
+    { "action": "shell", "resource": "df *", "effect": "allow" },
+    { "action": "shell", "resource": "du *", "effect": "allow" },
+    { "action": "shell", "resource": "free *", "effect": "allow" },
+    { "action": "shell", "resource": "ps *", "effect": "allow" },
+    { "action": "shell", "resource": "hostname *", "effect": "allow" },
+    { "action": "shell", "resource": "which *", "effect": "allow" },
+    { "action": "shell", "resource": "whereis *", "effect": "allow" },
+    { "action": "shell", "resource": "man *", "effect": "allow" },
+
+    // Version checks
+    { "action": "shell", "resource": "git --version", "effect": "allow" },
+    { "action": "shell", "resource": "node --version", "effect": "allow" },
+    { "action": "shell", "resource": "node -v", "effect": "allow" },
+    { "action": "shell", "resource": "npm --version", "effect": "allow" },
+    { "action": "shell", "resource": "npm -v", "effect": "allow" },
+    { "action": "shell", "resource": "python --version", "effect": "allow" },
+    { "action": "shell", "resource": "python3 --version", "effect": "allow" },
+    { "action": "shell", "resource": "bun --version", "effect": "allow" },
+    { "action": "shell", "resource": "go version", "effect": "allow" },
+    { "action": "shell", "resource": "rustc --version", "effect": "allow" },
+    { "action": "shell", "resource": "cargo --version", "effect": "allow" },
+
+    // Read-only Git inspection
+    { "action": "shell", "resource": "git status *", "effect": "allow" },
+    { "action": "shell", "resource": "git diff *", "effect": "allow" },
+    { "action": "shell", "resource": "git log *", "effect": "allow" },
+    { "action": "shell", "resource": "git show *", "effect": "allow" },
+    { "action": "shell", "resource": "git blame *", "effect": "allow" },
+    { "action": "shell", "resource": "git grep *", "effect": "allow" },
+    { "action": "shell", "resource": "git ls-files *", "effect": "allow" },
+    { "action": "shell", "resource": "git rev-parse *", "effect": "allow" },
+    { "action": "shell", "resource": "git describe *", "effect": "allow" },
+    { "action": "shell", "resource": "git shortlog *", "effect": "allow" },
+    { "action": "shell", "resource": "git show-ref *", "effect": "allow" },
+    { "action": "shell", "resource": "git branch --list*", "effect": "allow" },
+    { "action": "shell", "resource": "git branch --show-current", "effect": "allow" },
+    { "action": "shell", "resource": "git branch -a*", "effect": "allow" },
+    { "action": "shell", "resource": "git branch --all*", "effect": "allow" },
+    { "action": "shell", "resource": "git branch -r*", "effect": "allow" },
+    { "action": "shell", "resource": "git branch -v*", "effect": "allow" },
+    { "action": "shell", "resource": "git remote -v*", "effect": "allow" },
+    { "action": "shell", "resource": "git remote show *", "effect": "allow" },
+    { "action": "shell", "resource": "git stash list*", "effect": "allow" },
+    { "action": "shell", "resource": "git stash show *", "effect": "allow" },
+    { "action": "shell", "resource": "git tag -l*", "effect": "allow" },
+    { "action": "shell", "resource": "git tag --list*", "effect": "allow" },
+    { "action": "shell", "resource": "git config --get*", "effect": "allow" },
+    { "action": "shell", "resource": "git config --list*", "effect": "allow" },
+
+    // Extra guards: these still ask even when the command above is allowed.
+    { "action": "shell", "resource": "*.env*", "effect": "ask" },
+    { "action": "shell", "resource": "*>*", "effect": "ask" },
+    { "action": "shell", "resource": "*--output*", "effect": "ask" },
+    { "action": "shell", "resource": "sort -o *", "effect": "ask" },
+    { "action": "shell", "resource": "sed -i*", "effect": "ask" },
+    { "action": "shell", "resource": "sed -?i*", "effect": "ask" },
+    { "action": "shell", "resource": "sed -??i*", "effect": "ask" },
+    { "action": "shell", "resource": "sed -???i*", "effect": "ask" },
+    { "action": "shell", "resource": "sed --in-place*", "effect": "ask" },
+    { "action": "shell", "resource": "sed * -i*", "effect": "ask" },
+    { "action": "shell", "resource": "sed * --in-place*", "effect": "ask" },
+
+    // find can mutate or execute through these primaries
+    { "action": "shell", "resource": "find * -delete*", "effect": "ask" },
+    { "action": "shell", "resource": "find * -exec*", "effect": "ask" },
+    { "action": "shell", "resource": "find * -ok*", "effect": "ask" },
+    { "action": "shell", "resource": "find * -fprint*", "effect": "ask" },
+    { "action": "shell", "resource": "find * -fls*", "effect": "ask" }
+  ]
 }
