@@ -1,0 +1,8 @@
+# NuPhy Air75 V2 exposes a bogus "System Control" HID collection which Linux
+# classifies as a joystick (ID_INPUT_JOYSTICK=1).  Its ABS_MISC axis declares
+# min=1 while the value rests at 0, so SDL normalizes it to -32768 and games /
+# emulators (e.g. mGBA) see the left direction permanently held.
+#
+# SDL's evdev backend only enumerates event nodes it can open, so revoking the
+# uaccess ACL and making the node root-only hides the phantom controller.
+SUBSYSTEM=="input", ATTRS{name}=="NuPhy NuPhy Air75 V2 System Control", TAG-="uaccess", MODE="0600", GROUP="root"
